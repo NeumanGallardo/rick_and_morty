@@ -1,0 +1,14 @@
+  
+  /* Estilo del campo de entrada de búsqueda */
+  .input {
+    width: 10%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  /* Estilo del botón de búsqueda al pasar el mouse sobre él */
+  .button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+  }

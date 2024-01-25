@@ -1,0 +1,34 @@
+
+  .container{color: rgb(135, 67, 194);
+    border-radius: 30px;
+    background-color: rgb(82, 179, 129);
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Estilo para la imagen dentro de la tarjeta */
+  .container img {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }  
+  /* Estilo para el botón dentro de la tarjeta */
+  button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  h2 {font-size: 16px;}
+  /* Cambiar estilos al pasar el ratón sobre la tarjeta */
+  .container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: box-shadow 1s, transform 1s;
+    background-color: rgb(34, 190, 81);
+  }

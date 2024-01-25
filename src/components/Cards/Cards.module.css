@@ -1,0 +1,9 @@
+.container{
+background-color: rgb(77, 157, 187);
+border-radius: 30px;
+display:inline-block;
+flex-wrap: wrap;
+justify-content: space-around;
+overflow: hidden;
+align-items: center;
+}
