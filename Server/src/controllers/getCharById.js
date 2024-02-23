@@ -1,16 +1,14 @@
 const axios = require('axios');
 const URL='https://rickandmortyapi.com/api/character/';
-const gerCharById = async (req, res)=>{
-const {id}=req.params;
+const getCharById = async (req, res)=>{
+const ID=req.params.id;
 try{
-const response = await   axios(`${URL}${id}`)
+const response = await   axios(`${URL}${ID}`)
 const { id, name, status, species, origin, gender, image } = response.data;
 const character ={id, name, status, species, origin, image, gender};
 return res.json(character);
-// cadena de texto es decir string
-res.end(JSON.stringify(character));
 }
-catch{
+catch(error){
 return res.status(500).json({message: error.message});
 }
 };

@@ -11,20 +11,32 @@ import Favorites from './components/Favorites/index.jsx';
 function App() {
 const navigate = useNavigate();
 const [access, setAccess] = useState(false);
-//BD false
-const EMAIL = 'micorreo@gmail.com';
-const PASSWORD = '1234asd';
+//BD false front-end
+//const EMAIL = 'micorreo@gmail.com';
+//const PASSWORD = '1234asd';
 
-useEffect(() => {
-   !access && navigate('/');
-}, [navigate, access]);
-
+//useEffect(() => {
+  // !access && navigate('/');
+//}, [navigate, access]); 
+// con db simulada en el back=end
+function login(userData) {
+   const { email, password } = userData;
+   const URL = 'http://localhost:3001/rickandmorty/login/';
+   axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      //setAccess(data);
+      console.log(access);
+      access && navigate('/home');
+   })
+   .catch((error)=>console.log('error', error));
+}
+/* con db simulaa en el front-end
 function login(userData) {
    if (userData.PassWord === PASSWORD && userData.Email === EMAIL) {
       setAccess(true);
       navigate('/home');
    }
-}
+} */
 //crando estado local
 const [characters, setCharacters]=useState([]);
 const location=useLocation();

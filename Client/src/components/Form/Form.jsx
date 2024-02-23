@@ -11,14 +11,16 @@ function handleChange(event){
 setUserData({...userData,[event.target.name]:event.target.value});
 }
 
-return <form onSubmit={()=>{login(userData)}}>
+const handleSubmit=(event)=>{event.preventDefault();login(userData);};
+
+return <form onSubmit={handleSubmit}>
     <label>Email</label> 
-    <input type='text'name='Email'value={userData.Email}
-    onChange={handleChange}></input>{errors.Email!==''&&<p>{errors.Email}</p>}
+    <input type='text'name='email'value={userData.email}
+    onChange={handleChange}></input>{errors.email!==''&&<p>{errors.email}</p>}
     <label>PassWord</label> 
-    <input type='password'name='PassWord'value={userData.PassWord} 
-    onChange={handleChange}></input>{errors.PassWord!==''&&<p>{errors.PassWord}</p>}
-    <button>Login</button>
+    <input type='password'name='password'value={userData.password} 
+    onChange={handleChange}></input>{errors.password!==''&&<p>{errors.password}</p>}
+    <button type="submit">Login</button>
 </form>
 
 }
