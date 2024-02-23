@@ -1,3 +1,11 @@
+const express = require('express');
+const server = express();
+const PORT = 3001;
+server.listen(PORT, () => {
+    console.log('Server raised in port: ' + PORT);
+ });
+/* 
+//servidor con http
 const http = require('http');
 //const characters =require('./Utils/data');
 const getCharById = require('./controllers/getCharById');
@@ -20,4 +28,4 @@ res.end('character not found, personaje no encontrado');
  //console.log('request received',req.url);}
 }).listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`)
-});
+}); */
