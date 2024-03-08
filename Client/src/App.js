@@ -25,7 +25,7 @@ function login(userData) {
    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
       const { access } = data;
       //setAccess(data);
-      console.log(access);
+      console.log( " access", access);
       access && navigate('/home');
    })
    .catch((error)=>console.log('error', error));
